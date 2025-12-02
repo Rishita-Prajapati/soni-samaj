@@ -1,7 +1,7 @@
-/* EventsPages.css - Clean Orange & White Theme for All Pages */
+/* EventsPages.css - Modern Instagram-Inspired Layout */
 
 .events-page {
-  background-color: #ffffff;
+  background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%);
   min-height: 100vh;
   padding-top: 100px;
 }
@@ -20,79 +20,57 @@
   padding: 0 20px;
 }
 
-/* Clean UI Container - Centered Layout */
+/* Modern Centered Container */
 .events-container-full {
-  max-width: 650px;
+  max-width: 600px;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 30px 20px;
 }
 
 .events-feed-centered {
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 35px;
 }
 
-/* Clean Admin Post Card */
+/* Modern Post Card - Instagram Style */
 .admin-post-card-clean {
   background: white;
-  border-radius: 20px;
-  box-shadow: 0 8px 32px rgba(255, 107, 53, 0.12);
-  border: 2px solid #fff7f4;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e0e0e0;
   overflow: hidden;
-  transition: all 0.4s ease;
-  position: relative;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .admin-post-card-clean:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 16px 48px rgba(255, 107, 53, 0.2);
-  border-color: #ff6b35;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
 }
 
-.admin-post-card-clean::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, #ff6b35, #ff8a50);
-}
-
-/* Clean Admin Post Header */
+/* Post Header */
 .admin-post-header-clean {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 24px 28px;
-  border-bottom: 2px solid #fff7f4;
-  background: white;
+  padding: 14px 16px;
+  border-bottom: 1px solid #efefef;
 }
 
 .admin-info {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
 }
 
 .admin-avatar {
-  width: 48px;
-  height: 48px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   overflow: hidden;
-  border: 3px solid #ff6b35;
-  box-shadow: 0 4px 16px rgba(255, 107, 53, 0.3);
+  border: 2px solid #ff6b35;
   position: relative;
-}
-
-.admin-avatar::after {
-  content: '';
-  position: absolute;
-  inset: -2px;
-  border-radius: 50%;
-  background: linear-gradient(45deg, #ff6b35, #ff8a50);
-  z-index: -1;
+  flex-shrink: 0;
 }
 
 .admin-avatar img {
@@ -107,267 +85,116 @@
 }
 
 .admin-username {
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: #2c3e50;
+  font-size: 14px;
+  font-weight: 600;
+  color: #262626;
   margin: 0;
+  line-height: 1.3;
 }
 
 .post-time {
-  font-size: 0.9rem;
-  color: #ff6b35;
-  margin-top: 3px;
-  font-weight: 600;
+  font-size: 12px;
+  color: #8e8e8e;
+  margin-top: 2px;
+  font-weight: 400;
 }
 
 .verified-badge {
-  background: linear-gradient(135deg, #ff6b35, #ff8a50);
+  background: #ff6b35;
   color: white;
-  width: 28px;
-  height: 28px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.85rem;
+  font-size: 11px;
   font-weight: bold;
-  box-shadow: 0 4px 12px rgba(255, 107, 53, 0.4);
 }
 
-/* Clean Title Section */
-.post-title-section-clean {
-  background: linear-gradient(135deg, #ff6b35 0%, #ff8a50 100%);
-  color: white;
-  padding: 36px 28px;
-  text-align: center;
+/* Post Content */
+.admin-post-content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Image Section - Full Width */
+.post-images-clean {
+  width: 100%;
+  aspect-ratio: 1 / 1;
   position: relative;
   overflow: hidden;
-}
-
-.post-title-section-clean::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
-  animation: shimmer 3s ease-in-out infinite;
-}
-
-@keyframes shimmer {
-  0%, 100% { transform: translateX(-100%) translateY(-100%); }
-  50% { transform: translateX(0%) translateY(0%); }
-}
-
-.post-main-title {
-  font-size: 2.2rem;
-  font-weight: 800;
-  margin-bottom: 12px;
-  color: white;
-  line-height: 1.2;
-  position: relative;
-  z-index: 1;
-}
-
-.post-subtitle {
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: #fff7f4;
-  margin: 0;
-  position: relative;
-  z-index: 1;
-}
-
-/* Clean Image Section */
-.post-images-clean {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  height: 380px;
-  gap: 4px;
-  background: #ff6b35;
+  background: #f5f5f5;
 }
 
 .main-image {
-  overflow: hidden;
+  width: 100%;
+  height: 100%;
   position: relative;
+  overflow: hidden;
 }
 
 .main-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.5s ease;
+  transition: transform 0.3s ease;
 }
 
 .secondary-image {
-  overflow: hidden;
-  position: relative;
+  display: none; /* Hidden in single-image layout */
 }
 
-.secondary-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
+.admin-post-card-clean:hover .main-image img {
+  transform: scale(1.02);
 }
 
-.admin-post-card-clean:hover .main-image img,
-.admin-post-card-clean:hover .secondary-image img {
-  transform: scale(1.1);
-}
-
-/* Clean Description */
-.post-description-clean {
-  padding: 28px;
-  background: white;
-}
-
-.post-description-clean p {
-  color: #2c3e50;
-  line-height: 1.8;
-  font-size: 1.1rem;
-  margin: 0;
-  font-weight: 400;
-}
-
-/* Birthday Person Info */
-.birthday-person-info {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  padding: 16px 20px;
-  background: linear-gradient(135deg, #fff7f4, #ffe8e0);
-  border-radius: 12px;
-  margin-bottom: 20px;
-  border-left: 4px solid #ff6b35;
-}
-
-.birthday-cake {
-  font-size: 2rem;
-}
-
-.person-details {
-  flex: 1;
-}
-
-.person-name {
-  font-weight: 700;
-  color: #ff6b35;
-  font-size: 1.2rem;
-  margin-bottom: 4px;
-}
-
-.person-age {
-  font-size: 0.9rem;
-  color: #ff8a50;
-  font-weight: 600;
-}
-
-/* News Priority Badge */
-.news-priority-badge {
-  margin-bottom: 16px;
-}
-
-.priority-indicator {
-  display: inline-block;
-  padding: 8px 16px;
-  border-radius: 20px;
-  font-size: 0.85rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.priority-indicator.high {
-  background: linear-gradient(135deg, #ff4444, #ff6666);
-  color: white;
-}
-
-.priority-indicator.medium {
-  background: linear-gradient(135deg, #ff8800, #ffaa44);
-  color: white;
-}
-
-.priority-indicator.low {
-  background: linear-gradient(135deg, #44aa44, #66cc66);
-  color: white;
-}
-
-/* Clean Post Actions */
+/* Post Actions - Instagram Style */
 .admin-post-actions-clean {
-  padding: 24px 28px;
-  border-top: 2px solid #fff7f4;
-  background: linear-gradient(135deg, #fffcfa, #fff7f4);
+  padding: 8px 16px 14px;
+  border-bottom: 1px solid #efefef;
 }
 
 .action-buttons-clean {
   display: flex;
-  gap: 24px;
-  margin-bottom: 18px;
+  gap: 16px;
+  margin-bottom: 10px;
+  align-items: center;
 }
 
 .action-btn-clean {
-  background: white;
-  border: 2px solid #ff6b35;
+  background: transparent;
+  border: none;
   cursor: pointer;
-  padding: 12px;
-  transition: all 0.3s ease;
+  padding: 8px;
+  transition: all 0.2s ease;
   border-radius: 50%;
-  width: 48px;
-  height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.action-btn-clean::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, #ff6b35, #ff8a50);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.action-btn-clean:hover::before {
-  opacity: 1;
 }
 
 .action-btn-clean:hover {
+  background: #f5f5f5;
   transform: scale(1.1);
-  box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
-  border-color: #ff8a50;
 }
 
-.action-btn-clean:hover .action-icon {
-  transform: scale(1.1);
-  position: relative;
-  z-index: 1;
+.action-btn-clean:active {
+  transform: scale(0.95);
 }
 
 .action-icon {
-  font-size: 1.5rem;
-  transition: transform 0.3s ease;
-  position: relative;
-  z-index: 1;
-}
-
-.like-btn.liked {
-  background: #ff6b35;
-  color: white;
-  border-color: #ff8a50;
+  font-size: 24px;
+  transition: transform 0.2s ease;
 }
 
 .like-btn.liked .action-icon {
-  animation: likeAnimation 0.5s ease;
+  animation: likeAnimation 0.4s ease;
 }
 
 @keyframes likeAnimation {
   0% { transform: scale(1); }
-  50% { transform: scale(1.4) rotate(15deg); }
+  50% { transform: scale(1.3); }
   100% { transform: scale(1); }
 }
 
@@ -375,183 +202,217 @@
   margin-left: auto;
 }
 
-/* Clean Post Stats */
+/* Post Stats */
 .post-stats-clean {
   display: flex;
-  gap: 24px;
+  gap: 8px;
   align-items: center;
+  font-size: 14px;
 }
 
 .likes-count {
-  font-weight: 700;
-  color: #ff6b35;
-  font-size: 1.05rem;
+  font-weight: 600;
+  color: #262626;
 }
 
 .shares-count {
-  color: #ff8a50;
-  font-size: 1.05rem;
+  color: #8e8e8e;
+}
+
+.shares-count::before {
+  content: '•';
+  margin-right: 8px;
+  color: #8e8e8e;
+}
+
+/* Title and Description Section */
+.post-title-section-clean {
+  padding: 0 16px 8px;
+}
+
+.post-main-title {
+  font-size: 16px;
   font-weight: 600;
+  margin: 0 0 4px 0;
+  color: #262626;
+  line-height: 1.4;
+}
+
+.post-subtitle {
+  font-size: 14px;
+  font-weight: 400;
+  color: #8e8e8e;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Description */
+.post-description-clean {
+  padding: 0 16px 12px;
+}
+
+.post-description-clean p {
+  color: #262626;
+  line-height: 1.5;
+  font-size: 14px;
+  margin: 0;
+  font-weight: 400;
+}
+
+.post-description-clean p .read-more {
+  color: #8e8e8e;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* Birthday Person Info */
+.birthday-person-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: #fffbf7;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  border-left: 3px solid #ff6b35;
+}
+
+.birthday-cake {
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.person-details {
+  flex: 1;
+}
+
+.person-name {
+  font-weight: 600;
+  color: #262626;
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+
+.person-age {
+  font-size: 12px;
+  color: #8e8e8e;
+  font-weight: 400;
+}
+
+/* News Priority Badge */
+.news-priority-badge {
+  margin-bottom: 12px;
+}
+
+.priority-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.priority-indicator.high {
+  background: #fee;
+  color: #c00;
+}
+
+.priority-indicator.medium {
+  background: #ffeaa7;
+  color: #d63031;
+}
+
+.priority-indicator.low {
+  background: #dfe6e9;
+  color: #636e72;
+}
+
+/* Page Specific Variations */
+
+/* Shok Page - Gray Theme */
+.shok-page .admin-avatar {
+  border-color: #6c757d;
+}
+
+.shok-page .verified-badge {
+  background: #6c757d;
+}
+
+.shok-page .action-icon {
+  filter: grayscale(20%);
+}
+
+/* Birthday Page - Pink Theme */
+.birthday-page .admin-avatar {
+  border-color: #e91e63;
+}
+
+.birthday-page .verified-badge {
+  background: #e91e63;
+}
+
+.birthday-page .birthday-person-info {
+  background: #fce4ec;
+  border-left-color: #e91e63;
+}
+
+/* News Page - Blue Theme */
+.news-page .admin-avatar {
+  border-color: #2196f3;
+}
+
+.news-page .verified-badge {
+  background: #2196f3;
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  background: white;
+  border-radius: 16px;
+  margin: 20px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.empty-state-icon {
+  font-size: 64px;
+  margin-bottom: 16px;
+}
+
+.empty-state h2 {
+  font-size: 20px;
+  color: #262626;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.empty-state p {
+  font-size: 14px;
+  color: #8e8e8e;
 }
 
 /* Scroll Animations */
 .admin-post-card-clean {
+  animation: fadeInUp 0.5s ease forwards;
   opacity: 0;
-  transform: translateY(40px);
-  animation: fadeInUp 0.8s ease forwards;
 }
 
-.admin-post-card-clean:nth-child(1) { animation-delay: 0.1s; }
-.admin-post-card-clean:nth-child(2) { animation-delay: 0.2s; }
-.admin-post-card-clean:nth-child(3) { animation-delay: 0.3s; }
-.admin-post-card-clean:nth-child(4) { animation-delay: 0.4s; }
-.admin-post-card-clean:nth-child(5) { animation-delay: 0.5s; }
+.admin-post-card-clean:nth-child(1) { animation-delay: 0.05s; }
+.admin-post-card-clean:nth-child(2) { animation-delay: 0.1s; }
+.admin-post-card-clean:nth-child(3) { animation-delay: 0.15s; }
+.admin-post-card-clean:nth-child(4) { animation-delay: 0.2s; }
+.admin-post-card-clean:nth-child(5) { animation-delay: 0.25s; }
 
 @keyframes fadeInUp {
   to {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-/* Hover Effects */
-.admin-post-card-clean:hover .post-title-section-clean {
-  background: linear-gradient(135deg, #e55a2e 0%, #ff6b35 100%);
-}
-
-.admin-post-card-clean:hover .post-subtitle {
-  color: #ffffff;
-}
-
-/* Page Specific Variations */
-
-/* Shok Samachar Page - Respectful Gray Tones */
-.shok-page .admin-post-card-clean::before {
-  background: linear-gradient(90deg, #6c757d, #8e9297);
-}
-
-.shok-page .admin-avatar {
-  border-color: #6c757d;
-  box-shadow: 0 4px 16px rgba(108, 117, 125, 0.3);
-}
-
-.shok-page .post-time {
-  color: #6c757d;
-}
-
-.shok-page .verified-badge {
-  background: linear-gradient(135deg, #6c757d, #8e9297);
-}
-
-.shok-page .post-title-section-clean {
-  background: linear-gradient(135deg, #6c757d 0%, #8e9297 100%);
-}
-
-.shok-page .action-btn-clean {
-  border-color: #6c757d;
-}
-
-.shok-page .action-btn-clean::before {
-  background: linear-gradient(135deg, #6c757d, #8e9297);
-}
-
-.shok-page .like-btn.liked {
-  background: #6c757d;
-  border-color: #8e9297;
-}
-
-.shok-page .likes-count {
-  color: #6c757d;
-}
-
-.shok-page .shares-count {
-  color: #8e9297;
-}
-
-/* Birthday Page - Festive Pink Tones */
-.birthday-page .admin-post-card-clean::before {
-  background: linear-gradient(90deg, #e91e63, #f06292);
-}
-
-.birthday-page .admin-avatar {
-  border-color: #e91e63;
-  box-shadow: 0 4px 16px rgba(233, 30, 99, 0.3);
-}
-
-.birthday-page .post-time {
-  color: #e91e63;
-}
-
-.birthday-page .verified-badge {
-  background: linear-gradient(135deg, #e91e63, #f06292);
-}
-
-.birthday-page .post-title-section-clean {
-  background: linear-gradient(135deg, #e91e63 0%, #f06292 100%);
-}
-
-.birthday-page .action-btn-clean {
-  border-color: #e91e63;
-}
-
-.birthday-page .action-btn-clean::before {
-  background: linear-gradient(135deg, #e91e63, #f06292);
-}
-
-.birthday-page .like-btn.liked {
-  background: #e91e63;
-  border-color: #f06292;
-}
-
-.birthday-page .likes-count {
-  color: #e91e63;
-}
-
-.birthday-page .shares-count {
-  color: #f06292;
-}
-
-/* News Page - Professional Blue Tones */
-.news-page .admin-post-card-clean::before {
-  background: linear-gradient(90deg, #2196f3, #42a5f5);
-}
-
-.news-page .admin-avatar {
-  border-color: #2196f3;
-  box-shadow: 0 4px 16px rgba(33, 150, 243, 0.3);
-}
-
-.news-page .post-time {
-  color: #2196f3;
-}
-
-.news-page .verified-badge {
-  background: linear-gradient(135deg, #2196f3, #42a5f5);
-}
-
-.news-page .post-title-section-clean {
-  background: linear-gradient(135deg, #2196f3 0%, #42a5f5 100%);
-}
-
-.news-page .action-btn-clean {
-  border-color: #2196f3;
-}
-
-.news-page .action-btn-clean::before {
-  background: linear-gradient(135deg, #2196f3, #42a5f5);
-}
-
-.news-page .like-btn.liked {
-  background: #2196f3;
-  border-color: #42a5f5;
-}
-
-.news-page .likes-count {
-  color: #2196f3;
-}
-
-.news-page .shares-count {
-  color: #42a5f5;
 }
 
 /* Responsive Design */
@@ -562,53 +423,21 @@
   
   .events-container-full {
     max-width: 100%;
-    padding: 30px 15px;
-  }
-  
-  .admin-post-header-clean {
-    padding: 20px 22px;
-  }
-  
-  .post-title-section-clean {
-    padding: 28px 22px;
-  }
-  
-  .post-main-title {
-    font-size: 1.8rem;
-  }
-  
-  .post-subtitle {
-    font-size: 1.1rem;
-  }
-  
-  .post-images-clean {
-    height: 300px;
-  }
-  
-  .post-description-clean {
-    padding: 22px;
-  }
-  
-  .admin-post-actions-clean {
-    padding: 20px 22px;
-  }
-  
-  .action-buttons-clean {
-    gap: 18px;
-  }
-  
-  .admin-avatar {
-    width: 42px;
-    height: 42px;
+    padding: 20px 0;
   }
   
   .events-feed-centered {
-    gap: 35px;
+    gap: 25px;
   }
   
-  .action-btn-clean {
-    width: 44px;
-    height: 44px;
+  .admin-post-card-clean {
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+  
+  .post-images-clean {
+    aspect-ratio: 4 / 5;
   }
 }
 
@@ -617,106 +446,71 @@
     padding-top: 120px;
   }
   
-  .events-container-full {
-    padding: 20px 12px;
+  .admin-post-header-clean {
+    padding: 12px 14px;
   }
   
-  .admin-post-card-clean {
-    border-radius: 16px;
-  }
-  
-  .post-images-clean {
-    grid-template-columns: 1fr;
-    height: auto;
-  }
-  
-  .main-image,
-  .secondary-image {
-    height: 240px;
-  }
-  
-  .post-title-section-clean {
-    padding: 24px 18px;
-  }
-  
-  .post-main-title {
-    font-size: 1.6rem;
-  }
-  
-  .post-subtitle {
-    font-size: 1rem;
+  .admin-avatar {
+    width: 36px;
+    height: 36px;
   }
   
   .admin-username {
-    font-size: 1rem;
+    font-size: 13px;
+  }
+  
+  .post-time {
+    font-size: 11px;
   }
   
   .action-icon {
-    font-size: 1.3rem;
+    font-size: 22px;
   }
   
-  .action-btn-clean {
-    width: 40px;
-    height: 40px;
+  .post-main-title {
+    font-size: 15px;
+  }
+  
+  .post-subtitle {
+    font-size: 13px;
+  }
+  
+  .post-description-clean p {
+    font-size: 13px;
   }
   
   .birthday-person-info {
-    flex-direction: column;
-    text-align: center;
-    gap: 10px;
+    padding: 10px 14px;
+  }
+  
+  .person-name {
+    font-size: 13px;
   }
 }
 
 /* Loading States */
-.loading-post-clean {
-  background: white;
-  border-radius: 20px;
-  padding: 24px;
-  box-shadow: 0 8px 32px rgba(255, 107, 53, 0.12);
-  animation: shimmerLoad 2s infinite;
+.loading-skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s ease-in-out infinite;
+  border-radius: 8px;
 }
 
-@keyframes shimmerLoad {
-  0% { opacity: 1; }
-  50% { opacity: 0.7; }
-  100% { opacity: 1; }
+@keyframes loading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
 }
 
-/* Birthday Card Specific Styling */
-.birthday-card .birthday-person-info {
-  animation: birthdayGlow 2s ease-in-out infinite alternate;
-}
-
-@keyframes birthdayGlow {
-  from { box-shadow: 0 0 5px rgba(233, 30, 99, 0.3); }
-  to { box-shadow: 0 0 15px rgba(233, 30, 99, 0.6); }
-}
-
-/* News Card Specific Styling */
-.news-card .news-priority-badge {
-  margin-bottom: 16px;
-}
-
-.news-card .priority-indicator {
-  animation: priorityPulse 3s ease-in-out infinite;
-}
-
-@keyframes priorityPulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-}
-
-/* Legacy Support for Old Layout (Hidden) */
+/* Hide old layout elements */
 .events-container,
 .events-sidebar,
 .admin-sidebar,
 .post-card,
-.admin-post-card,
 .sidebar-card {
   display: none !important;
 }
 
-/* Ensure Clean UI is Always Used */
+/* Ensure modern UI is used */
 .clean-ui .events-container-full {
   display: block;
 }
@@ -727,4 +521,44 @@
 
 .clean-ui .admin-post-card-clean {
   display: block;
+}
+
+/* Additional modern touches */
+.admin-post-card-clean::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 107, 53, 0.3), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.admin-post-card-clean:hover::after {
+  opacity: 1;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fafafa;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #dbdbdb;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c0c0c0;
 }
