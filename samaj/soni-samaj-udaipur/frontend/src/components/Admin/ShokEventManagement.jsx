@@ -172,7 +172,11 @@ const ShokEventManagement = ({ admin, onLogout }) => {
             <p>Manage condolence and memorial events</p>
           </div>
           <button 
-            onClick={() => setShowForm(true)}
+            onClick={() => {
+              console.log('Shok button clicked');
+              setShowForm(true);
+              setEditingEvent(null);
+            }}
             className="add-event-btn"
             style={{
               background: '#10b981',

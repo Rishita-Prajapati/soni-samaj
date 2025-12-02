@@ -202,7 +202,11 @@ const BirthdayEventManagement = ({ admin, onLogout }) => {
             <p>Manage birthday celebrations and wishes</p>
           </div>
           <button 
-            onClick={() => setShowForm(true)}
+            onClick={() => {
+              console.log('Birthday button clicked');
+              setShowForm(true);
+              setEditingEvent(null);
+            }}
             className="add-event-btn"
             style={{
               background: '#10b981',

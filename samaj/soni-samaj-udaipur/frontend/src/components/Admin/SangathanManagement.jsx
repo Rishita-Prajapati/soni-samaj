@@ -245,7 +245,11 @@ const SangathanManagement = ({ admin, onLogout }) => {
             <p>Manage organization committee members</p>
           </div>
           <button 
-            onClick={handleShowForm}
+            onClick={() => {
+              console.log('Button clicked, setting showForm to true');
+              setShowForm(true);
+              setEditingMember(null);
+            }}
             className="add-event-btn"
             style={{
               background: '#10b981',

@@ -162,7 +162,11 @@ const NewsEventManagement = ({ admin, onLogout }) => {
             <p>Manage community news and articles</p>
           </div>
           <button 
-            onClick={() => setShowForm(true)}
+            onClick={() => {
+              console.log('News button clicked');
+              setShowForm(true);
+              setEditingEvent(null);
+            }}
             className="add-event-btn"
             style={{
               background: '#10b981',

@@ -177,7 +177,11 @@ const BadhaiEventManagement = ({ admin, onLogout }) => {
             <p>Manage celebration and congratulatory events</p>
           </div>
           <button 
-            onClick={() => setShowForm(true)}
+            onClick={() => {
+              console.log('Badhai button clicked');
+              setShowForm(true);
+              setEditingEvent(null);
+            }}
             style={{
               background: '#10b981',
               color: 'white',
