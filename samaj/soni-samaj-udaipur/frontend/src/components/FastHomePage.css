@@ -1,0 +1,157 @@
+/* Fast Homepage - Optimized CSS */
+.fast-homepage {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background: linear-gradient(135deg, #FFF5E1, #FFEAA7);
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #FF9933, #800000);
+  color: white;
+  border-radius: 15px;
+  margin-bottom: 30px;
+  box-shadow: 0 8px 25px rgba(255, 153, 51, 0.3);
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: white;
+  opacity: 0.9;
+}
+
+/* Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.stat-card {
+  text-align: center;
+}
+
+.stat-number {
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #FFF5E1;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: white;
+  opacity: 0.9;
+}
+
+/* Quick Actions */
+.quick-actions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.action-btn {
+  background: white;
+  color: #800000;
+  padding: 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.action-btn:hover {
+  transform: translateY(-3px);
+  text-decoration: none;
+  color: #800000;
+}
+
+/* Events Section */
+.events {
+  margin-bottom: 30px;
+}
+
+.events h2 {
+  color: #800000;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.event-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  border-left: 4px solid #FF9933;
+}
+
+.event-type {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.event-card h3 {
+  color: #800000;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.event-card p {
+  color: #666;
+  line-height: 1.4;
+}
+
+/* Loading */
+.loading-spinner {
+  text-align: center;
+  padding: 50px;
+  font-size: 1.2rem;
+  color: #800000;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .fast-homepage {
+    padding: 15px;
+  }
+  
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .quick-actions {
+    grid-template-columns: 1fr;
+  }
+  
+  .events-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,12 @@
+-- Drop all extra tables that shouldn't exist
+DROP TABLE IF EXISTS cities CASCADE;
+DROP TABLE IF EXISTS districts CASCADE;
+DROP TABLE IF EXISTS events CASCADE;
+DROP TABLE IF EXISTS file_uploads CASCADE;
+DROP TABLE IF EXISTS news_events CASCADE;
+DROP TABLE IF EXISTS sangathan_cities CASCADE;
+DROP TABLE IF EXISTS sangathan_districts CASCADE;
+DROP TABLE IF EXISTS sangathan_members CASCADE;
+DROP TABLE IF EXISTS sangathan_positions CASCADE;
+DROP TABLE IF EXISTS shok_events CASCADE;
+DROP TABLE IF EXISTS system_settings CASCADE;

@@ -1,0 +1,253 @@
+/* Fast Birthdays - Optimized CSS */
+.fast-birthdays {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background: linear-gradient(135deg, #FFF5E1, #FFEAA7);
+  min-height: 100vh;
+}
+
+.header {
+  text-align: center;
+  padding: 30px;
+  background: linear-gradient(135deg, #FF9933, #800000);
+  color: white;
+  border-radius: 15px;
+  margin-bottom: 30px;
+}
+
+.header h1 {
+  font-size: 2.2rem;
+  margin: 0 0 20px 0;
+  color: white;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.tab {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.tab:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.tab.active {
+  background: white;
+  color: #800000;
+  border-color: white;
+}
+
+.no-birthdays {
+  text-align: center;
+  padding: 60px;
+  background: white;
+  border-radius: 15px;
+  color: #800000;
+}
+
+.birthdays-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.birthday-card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  border: 3px solid transparent;
+}
+
+.birthday-card:hover {
+  transform: translateY(-5px);
+}
+
+.birthday-card.selected {
+  border-color: #FF9933;
+  background: #FFF5E1;
+}
+
+.birthday-card.upcoming {
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  border: 2px solid #6c757d;
+}
+
+.birthday-card.upcoming:hover {
+  background: linear-gradient(135deg, #e9ecef, #dee2e6);
+}
+
+.birthday-card.upcoming h3 {
+  color: #495057;
+}
+
+.birthday-card.upcoming p {
+  color: #6c757d;
+}
+
+.photo {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #FF9933;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #FF9933, #800000);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+}
+
+.birthday-card h3 {
+  color: #800000;
+  margin-bottom: 10px;
+}
+
+.birthday-card p {
+  color: #FF9933;
+  font-weight: bold;
+}
+
+.wish-section {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.wish-section h2 {
+  color: #800000;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.wish-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: #FFF5E1;
+  border-radius: 10px;
+}
+
+.wish-form input,
+.wish-form textarea {
+  padding: 12px;
+  border: 2px solid #FFE4B5;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.wish-form input:focus,
+.wish-form textarea:focus {
+  outline: none;
+  border-color: #FF9933;
+}
+
+.wish-form textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.wish-form button {
+  background: linear-gradient(135deg, #FF9933, #800000);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.wish-form button:hover {
+  transform: translateY(-2px);
+}
+
+.wishes-list h3 {
+  color: #800000;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #FFE4B5;
+  padding-bottom: 10px;
+}
+
+.wish-item {
+  background: #FFF5E1;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  border-left: 4px solid #FF9933;
+}
+
+.wish-item strong {
+  color: #800000;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.wish-item p {
+  margin: 5px 0;
+  color: #333;
+}
+
+.wish-item small {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.loading {
+  text-align: center;
+  padding: 50px;
+  font-size: 1.2rem;
+  color: #800000;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .fast-birthdays {
+    padding: 15px;
+  }
+  
+  .header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .birthdays-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .wish-section {
+    padding: 20px;
+  }
+}

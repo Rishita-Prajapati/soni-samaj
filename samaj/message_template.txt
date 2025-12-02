@@ -1,0 +1,100 @@
+🎉 BADHAAI EVENT SUBMISSION 🎉
+
+Event Title:
+Family Name:
+Occasion Type (Marriage/Newborn/Other):
+Date: ____ / ____ / ______
+Location:
+Contact Number:
+Description:
+Event Image (if any): [Attach]
+
+
+
+🙏 SHOK NEWS SUBMISSION 🙏
+
+Deceased Name:
+Age:
+Family Name:
+Relation (Father/Mother/Brother/Sister/etc.):
+Date of Death: ____ / ____ / ______
+Funeral Date: ____ / ____ / ______
+Funeral Location:
+Contact Number:
+Title (Optional):
+Condolence Message:
+Memorial Image (if any): [Attach]
+
+
+🎂 BIRTHDAY EVENT SUBMISSION 🎂
+
+Person Name:
+Age Turning:
+Family Name:
+Relationship (Son/Daughter/etc.):
+Birthday Date: ____ / ____ / ______
+Celebration Type (Birthday/Other):
+Birthday Wishes Message:
+Birthday Image (if any): [Attach]
+
+
+📰 NEWS ARTICLE SUBMISSION 📰
+
+News Title:
+Category:
+Priority (High/Medium/Low):
+Date: ____ / ____ / ______
+Location:
+Author:
+Source (if any):
+Short Description:
+Full Content:
+Tags:
+Contact Number:
+External Link:
+News Image (if any): [Attach]
+Feature Article? (Yes/No):
+Publish Immediately? (Yes/No):
+
+
+📝 MEMBER REGISTRATION SUBMISSION 📝
+
+👤 Personal Information
+Full Name: ______________________
+Father's Name: ______________________
+Mother's Name: ______________________
+Date of Birth: ____ / ____ / ______
+Born Time (HH:MM:SS): __________
+Born Place (City): __________________
+Born State: __________________
+Gender: __________
+Marital Status: __________
+
+🏠 Address Information
+Current Address: ______________________
+Permanent Address: ______________________
+District: __________________
+Area/Locality: __________________
+
+🔱 Gotra Details
+Gotra (Self): __________
+Gotra (Mother): __________
+Gotra (Nani): __________
+Gotra (Dadi): __________
+
+🎓 Education & Medical Info
+Qualification: __________
+Blood Group: __________
+
+📞 Contact & Photo
+Mobile Number: __________
+WhatsApp Number: __________
+Profile Picture: [Attach]
+
+💼 Work Information
+Job/Business: __________
+
+🛕 Religious Information
+Satimata Place: __________
+Bheruji Place: __________
+Kuldevi Place: __________

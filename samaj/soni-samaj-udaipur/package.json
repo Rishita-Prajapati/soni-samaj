@@ -1,0 +1,19 @@
+{
+  "name": "soni-samaj-udaipur",
+  "version": "1.0.0",
+  "description": "Soni Samaj Udaipur Community Website",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd backend && npm run dev",
+    "client": "cd frontend && npm start",
+    "build": "cd frontend && npm run build",
+    "start": "cd backend && npm start"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "keywords": ["community", "website", "react", "nodejs"],
+  "author": "",
+  "license": "ISC"
+}

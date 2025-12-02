@@ -1,0 +1,210 @@
+/* Scroll Fixes for Smooth Website Experience */
+
+/* Global smooth scrolling */
+* {
+  scroll-behavior: smooth !important;
+}
+
+html {
+  scroll-behavior: smooth !important;
+  scroll-padding-top: 100px;
+}
+
+body {
+  scroll-behavior: smooth !important;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* Fix for all containers */
+.container, .page-container, .admin-container {
+  overflow-x: hidden;
+  overflow-y: visible;
+  scroll-behavior: smooth;
+}
+
+/* Admin layout fixes */
+.admin-layout {
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: visible;
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-content {
+  flex: 1;
+  min-height: calc(100vh - 60px);
+  overflow-y: visible;
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-main {
+  flex: 1;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  padding: 20px;
+  background-color: #f9fafb;
+}
+
+/* Modal fixes */
+.modal-overlay {
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+.modal-content {
+  max-height: 90vh;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+/* Table fixes */
+.table-responsive {
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+/* Scrollable elements */
+div[style*="overflow-y: auto"],
+div[style*="overflowY: auto"] {
+  scroll-behavior: smooth !important;
+}
+
+/* Admin sidebar */
+.admin-sidebar {
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  height: 100vh;
+}
+
+/* Cards and content */
+.card, .dashboard-card, .stat-card {
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+}
+
+/* Grids */
+.stats-grid, .content-grid, .actions-grid {
+  width: 100%;
+  box-sizing: border-box;
+  display: grid;
+  gap: 1.5rem;
+}
+
+/* Dashboard container */
+.dashboard-container {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Forms */
+.form-control, input, textarea, select {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Welcome section */
+.welcome-section {
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 1.5rem;
+}
+
+/* Quick actions */
+.quick-actions {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .admin-main {
+    padding: 15px;
+  }
+  
+  .dashboard-container {
+    padding: 0;
+    gap: 1rem;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .content-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .actions-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .actions-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Overflow fixes */
+.overflow-fix {
+  overflow-x: hidden;
+  overflow-y: visible;
+  scroll-behavior: smooth;
+}
+
+/* Admin pages */
+.admin-page {
+  min-height: 100vh;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+/* Webkit scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Box sizing */
+.admin-layout * {
+  box-sizing: border-box;
+}
+
+/* Header */
+header {
+  flex-shrink: 0;
+  z-index: 1000;
+}
+
+/* Main content */
+main {
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}

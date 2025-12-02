@@ -1,0 +1,420 @@
+/* Admin Dashboard - Same Style as Homepage */
+.admin-dashboard {
+  background: linear-gradient(135deg, #FFF5E1 0%, #FFEAA7 100%);
+  min-height: 100vh;
+}
+
+/* Header */
+.admin-header {
+  background: linear-gradient(135deg, #FF9933 0%, #800000 100%);
+  color: white;
+  padding: 25px;
+  box-shadow: 0 8px 25px rgba(255, 153, 51, 0.3);
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-info h1 {
+  font-size: 2.2rem;
+  margin-bottom: 5px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.admin-info p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  color: white;
+}
+
+.logout-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Navigation */
+.admin-nav {
+  background: white;
+  padding: 0;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 0 0 15px 15px;
+}
+
+.admin-nav button {
+  background: none;
+  border: none;
+  padding: 20px 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #800000;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-bottom: 3px solid transparent;
+  flex: 1;
+}
+
+.admin-nav button:hover {
+  background: #FFF5E1;
+  color: #FF9933;
+}
+
+.admin-nav button.active {
+  background: #FFF5E1;
+  color: #FF9933;
+  border-bottom-color: #FF9933;
+}
+
+/* Main Content */
+.admin-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+/* Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.stat-card {
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: all 0.3s ease;
+  border-left: 5px solid #FF9933;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.stat-card.members {
+  border-left-color: #4169E1;
+}
+
+.stat-card.events {
+  border-left-color: #228B22;
+}
+
+.stat-card.messages {
+  border-left-color: #FF8C00;
+}
+
+.stat-card.birthdays {
+  border-left-color: #FF1493;
+}
+
+.stat-icon {
+  font-size: 3rem;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #FFF5E1, #FFE4B5);
+  border-radius: 50%;
+  border: 3px solid #FF9933;
+}
+
+.stat-info h3 {
+  font-size: 2.5rem;
+  color: #800000;
+  margin-bottom: 5px;
+}
+
+.stat-info p {
+  font-size: 1.1rem;
+  color: #3B2F2F;
+  margin-bottom: 5px;
+}
+
+.stat-info small {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Activity Section */
+.activity-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.recent-members,
+.recent-messages {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.recent-members h2,
+.recent-messages h2 {
+  color: #800000;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #FFE4B5;
+}
+
+/* Members List */
+.members-list,
+.messages-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.member-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: #FFF5E1;
+  border-radius: 10px;
+  border-left: 4px solid #FF9933;
+  transition: all 0.3s ease;
+}
+
+.member-item:hover {
+  transform: translateX(5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.member-info h4 {
+  color: #800000;
+  margin-bottom: 5px;
+  font-size: 1.1rem;
+}
+
+.member-info p {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+
+.status {
+  padding: 4px 12px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.status.pending {
+  background: rgba(255, 140, 0, 0.1);
+  color: #FF8C00;
+}
+
+.status.approved {
+  background: rgba(34, 139, 34, 0.1);
+  color: #228B22;
+}
+
+.status.rejected {
+  background: rgba(178, 34, 34, 0.1);
+  color: #B22222;
+}
+
+.member-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.approve-btn,
+.reject-btn {
+  width: 35px;
+  height: 35px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.approve-btn {
+  background: #228B22;
+  color: white;
+}
+
+.approve-btn:hover {
+  background: #32CD32;
+  transform: scale(1.1);
+}
+
+.reject-btn {
+  background: #B22222;
+  color: white;
+}
+
+.reject-btn:hover {
+  background: #DC143C;
+  transform: scale(1.1);
+}
+
+/* Messages List */
+.message-item {
+  padding: 15px;
+  background: #FFF5E1;
+  border-radius: 10px;
+  border-left: 4px solid #FF9933;
+  transition: all 0.3s ease;
+}
+
+.message-item:hover {
+  transform: translateX(5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.message-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.message-header strong {
+  color: #800000;
+  font-size: 1rem;
+}
+
+.message-date {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.message-item p {
+  color: #3B2F2F;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 40px 20px;
+  color: #666;
+}
+
+.empty-state p {
+  font-size: 1.1rem;
+  opacity: 0.7;
+}
+
+/* Loading State */
+.loading {
+  text-align: center;
+  padding: 60px;
+  font-size: 1.3rem;
+  color: #800000;
+}
+
+/* Section Placeholders */
+.members-section,
+.events-section,
+.messages-section {
+  background: white;
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.members-section h2,
+.events-section h2,
+.messages-section h2 {
+  color: #800000;
+  margin-bottom: 15px;
+  font-size: 2rem;
+}
+
+.members-section p,
+.events-section p,
+.messages-section p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+  
+  .admin-info h1 {
+    font-size: 1.8rem;
+  }
+  
+  .admin-nav {
+    flex-direction: column;
+  }
+  
+  .admin-nav button {
+    padding: 15px 20px;
+  }
+  
+  .admin-content {
+    padding: 20px 15px;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .activity-section {
+    grid-template-columns: 1fr;
+  }
+  
+  .stat-card {
+    padding: 20px;
+  }
+  
+  .stat-icon {
+    font-size: 2.5rem;
+    width: 60px;
+    height: 60px;
+  }
+  
+  .stat-info h3 {
+    font-size: 2rem;
+  }
+  
+  .member-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .member-actions {
+    align-self: flex-end;
+  }
+}

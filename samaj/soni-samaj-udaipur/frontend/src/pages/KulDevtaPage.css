@@ -1,0 +1,304 @@
+/* Add this CSS to the end of your EventsPages.css file */
+
+/* Kul Devta Page Specific Styles */
+.kul-devta-page .events-header {
+    background: linear-gradient(135deg, #ff8c00 0%, #ff6b35 50%, #ffa500 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .kul-devta-page .events-header::before {
+    content: '🕉️';
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    font-size: 8rem;
+    opacity: 0.1;
+    color: white;
+  }
+  
+  .kul-devta-page .events-header::after {
+    content: '🏛️';
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    font-size: 6rem;
+    opacity: 0.1;
+    color: white;
+  }
+  
+  .kul-devta-page .admin-post-card-clean::before {
+    background: linear-gradient(90deg, #ff8c00, #ffa500);
+  }
+  
+  .kul-devta-page .admin-avatar {
+    border-color: #ff8c00;
+    box-shadow: 0 4px 16px rgba(255, 140, 0, 0.3);
+  }
+  
+  .kul-devta-page .post-time {
+    color: #ff8c00;
+  }
+  
+  .kul-devta-page .verified-badge {
+    background: linear-gradient(135deg, #ff8c00, #ffa500);
+    font-size: 0.9rem;
+  }
+  
+  .kul-devta-page .post-title-section-clean {
+    background: linear-gradient(135deg, #ff8c00 0%, #ffa500 100%);
+  }
+  
+  .kul-devta-page .action-btn-clean {
+    border-color: #ff8c00;
+  }
+  
+  .kul-devta-page .action-btn-clean::before {
+    background: linear-gradient(135deg, #ff8c00, #ffa500);
+  }
+  
+  .kul-devta-page .like-btn.liked {
+    background: #ff8c00;
+    border-color: #ffa500;
+  }
+  
+  .kul-devta-page .likes-count {
+    color: #ff8c00;
+  }
+  
+  .kul-devta-page .shares-count {
+    color: #ffa500;
+  }
+  
+  /* Kul Devta Specific Information Styles */
+  .kul-devta-info {
+    background: linear-gradient(135deg, #fff8f0, #ffeee0);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 4px solid #ff8c00;
+    position: relative;
+  }
+  
+  .kul-devta-info::before {
+    content: '🏛️';
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 1.5rem;
+    opacity: 0.3;
+  }
+  
+  .devta-details {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .detail-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 140, 0, 0.1);
+  }
+  
+  .detail-row:last-child {
+    border-bottom: none;
+  }
+  
+  .detail-label {
+    font-weight: 600;
+    color: #ff8c00;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .detail-value {
+    font-weight: 700;
+    color: #d2691e;
+    font-size: 0.95rem;
+  }
+  
+  /* Gotras Section */
+  .gotras-section {
+    background: linear-gradient(135deg, #fef7f0, #fdf2e9);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 2px solid #ffe4cc;
+    position: relative;
+  }
+  
+  .gotras-section::before {
+    content: '🔱';
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    background: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    border: 2px solid #ff8c00;
+    font-size: 1.2rem;
+  }
+  
+  .gotras-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #d2691e;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .gotras-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .gotra-badge {
+    background: linear-gradient(135deg, #ff8c00, #ffa500);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 25px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    box-shadow: 0 3px 10px rgba(255, 140, 0, 0.3);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .gotra-badge::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+  }
+  
+  .gotra-badge:hover::before {
+    left: 100%;
+  }
+  
+  .gotra-badge:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 140, 0, 0.4);
+  }
+  
+  /* Description Styling */
+  .devta-description {
+    line-height: 1.8;
+    color: #5d4e37;
+    font-size: 1.05rem;
+    margin: 0;
+    padding: 15px 0;
+    border-top: 1px solid rgba(255, 140, 0, 0.1);
+  }
+  
+  /* Kul Devta Card Specific Hover Effects */
+  .kul-devta-card:hover .gotras-section {
+    background: linear-gradient(135deg, #fff8f0, #ffeee0);
+    border-color: #ff8c00;
+  }
+  
+  .kul-devta-card:hover .kul-devta-info {
+    background: linear-gradient(135deg, #fef7f0, #fdf2e9);
+    box-shadow: 0 4px 15px rgba(255, 140, 0, 0.2);
+  }
+  
+  .kul-devta-card:hover .gotra-badge {
+    animation: gotraPulse 2s ease-in-out infinite;
+  }
+  
+  @keyframes gotraPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+  }
+  
+  /* Sacred Glow Animation */
+  .kul-devta-card .kul-devta-info {
+    animation: sacredGlow 3s ease-in-out infinite alternate;
+  }
+  
+  @keyframes sacredGlow {
+    from { box-shadow: 0 0 5px rgba(255, 140, 0, 0.2); }
+    to { box-shadow: 0 0 20px rgba(255, 140, 0, 0.4); }
+  }
+  
+  /* Responsive Design for Kul Devta */
+  @media (max-width: 768px) {
+    .devta-details {
+      gap: 8px;
+    }
+    
+    .detail-row {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 5px;
+      padding: 10px 0;
+    }
+    
+    .gotras-list {
+      gap: 8px;
+    }
+    
+    .gotra-badge {
+      padding: 6px 12px;
+      font-size: 0.8rem;
+    }
+    
+    .kul-devta-info {
+      padding: 15px;
+    }
+    
+    .gotras-section {
+      padding: 15px;
+    }
+    
+    .gotras-title {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .kul-devta-info::before,
+    .gotras-section::before {
+      display: none;
+    }
+    
+    .detail-row {
+      padding: 8px 0;
+    }
+    
+    .gotras-list {
+      justify-content: center;
+    }
+    
+    .gotra-badge {
+      padding: 5px 10px;
+      font-size: 0.75rem;
+    }
+    
+    .devta-description {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+  }
+  
+  /* Special Effects for Sacred Content */
+  .kul-devta-page .post-title-section-clean:hover {
+    background: linear-gradient(135deg, #e6780a 0%, #ff8c00 100%);
+  }
+  
+  .kul-devta-page .admin-post-card-clean:hover .post-subtitle {
+    color: #fff8dc;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  }

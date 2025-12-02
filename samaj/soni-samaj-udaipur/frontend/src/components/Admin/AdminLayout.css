@@ -1,0 +1,155 @@
+/* AdminLayout.css */
+
+.admin-layout {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f3f4f6;
+    overflow-x: hidden;
+  }
+  
+  /* Main Content Area */
+  .admin-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* Page Content */
+  .admin-main {
+    flex: 1;
+    background-color: #f9fafb;
+    padding: 1.5rem;
+    min-height: calc(100vh - 80px);
+    overflow-y: auto;
+    scroll-behavior: smooth;
+  }
+  
+  .admin-container {
+    max-width: 80rem;
+    margin: 0 auto;
+  }
+  
+  /* Mobile Sidebar Overlay */
+  .mobile-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 20;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+  }
+  
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .mobile-overlay.active {
+      display: block;
+    }
+  }
+  
+  /* Custom scrollbar for main content */
+  .admin-main::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+  
+  .admin-main::-webkit-scrollbar-track {
+    background: #f3f4f6;
+  }
+  
+  .admin-main::-webkit-scrollbar-thumb {
+    background: #d1d5db;
+    border-radius: 0.25rem;
+  }
+  
+  .admin-main::-webkit-scrollbar-thumb:hover {
+    background: #9ca3af;
+  }
+  
+  /* Loading State */
+  .admin-loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    font-size: 1.2rem;
+  }
+  
+  .loading-content {
+    text-align: center;
+  }
+  
+  .loading-icon {
+    font-size: 3rem;
+    margin-bottom: 1.25rem;
+    animation: pulse 2s infinite;
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
+  
+  /* Page transitions */
+  .page-enter {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  
+  .page-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
+  }
+  
+  .page-exit {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .page-exit-active {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
+  }
+  
+  /* Breadcrumb styles (if needed) */
+  .admin-breadcrumb {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    font-size: 0.875rem;
+    color: #6b7280;
+  }
+  
+  .breadcrumb-item {
+    display: flex;
+    align-items: center;
+  }
+  
+  .breadcrumb-separator {
+    margin: 0 0.5rem;
+    color: #d1d5db;
+  }
+  
+  .breadcrumb-link {
+    color: #3b82f6;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  
+  .breadcrumb-link:hover {
+    color: #1d4ed8;
+  }
+  
+  .breadcrumb-current {
+    color: #1f2937;
+    font-weight: 500;
+  }

@@ -1,0 +1,261 @@
+/* Admin Panel Fixes - Comprehensive Layout and Scrolling Solutions */
+
+/* Global admin layout fixes */
+.admin-layout,
+.admin-content,
+.admin-main {
+  box-sizing: border-box !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* Ensure all admin containers are properly sized */
+.member-management,
+.message-management,
+.event-management,
+.sangathan-management,
+.badhai-management,
+.shok-management,
+.news-management,
+.birthday-management {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  overflow-y: auto !important;
+  scroll-behavior: smooth !important;
+  padding: 20px !important;
+}
+
+/* Fix for all admin tables */
+.admin-table-container,
+.members-table-container,
+.events-table-container,
+.messages-table-container {
+  width: 100% !important;
+  overflow-x: auto !important;
+  overflow-y: visible !important;
+  scroll-behavior: smooth !important;
+  box-sizing: border-box !important;
+}
+
+/* Ensure all admin tables are responsive */
+.admin-table,
+.members-table,
+.events-table,
+.messages-table {
+  width: 100% !important;
+  min-width: 800px !important;
+  box-sizing: border-box !important;
+}
+
+/* Fix for admin forms */
+.admin-form,
+.member-form,
+.event-form,
+.message-form {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  overflow-y: auto !important;
+  scroll-behavior: smooth !important;
+}
+
+/* Fix for admin modals */
+.admin-modal .modal-content {
+  max-height: 90vh !important;
+  overflow-y: auto !important;
+  scroll-behavior: smooth !important;
+  width: 90% !important;
+  max-width: 800px !important;
+  box-sizing: border-box !important;
+}
+
+/* Fix for admin cards and grids */
+.admin-card,
+.admin-grid,
+.stats-grid,
+.content-grid,
+.actions-grid {
+  width: 100% !important;
+  box-sizing: border-box !important;
+  overflow: visible !important;
+}
+
+/* Ensure proper spacing for admin components */
+.admin-section {
+  margin-bottom: 2rem !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* Fix for admin buttons and controls */
+.admin-controls,
+.controls-section {
+  width: 100% !important;
+  box-sizing: border-box !important;
+  flex-wrap: wrap !important;
+  gap: 1rem !important;
+}
+
+/* Fix for search and filter sections */
+.search-box,
+.filter-section {
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* Responsive fixes for mobile admin */
+@media (max-width: 768px) {
+  .admin-layout {
+    padding: 0 !important;
+  }
+  
+  .admin-main {
+    padding: 15px !important;
+  }
+  
+  .member-management,
+  .message-management,
+  .event-management,
+  .sangathan-management {
+    padding: 15px !important;
+  }
+  
+  .controls-section {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+  
+  .search-box {
+    min-width: auto !important;
+    width: 100% !important;
+  }
+  
+  .admin-table {
+    font-size: 14px !important;
+  }
+  
+  .admin-modal .modal-content {
+    width: 95% !important;
+    margin: 10px !important;
+  }
+}
+
+/* Fix for admin pagination */
+.pagination {
+  width: 100% !important;
+  box-sizing: border-box !important;
+  justify-content: center !important;
+  flex-wrap: wrap !important;
+  gap: 10px !important;
+}
+
+/* Ensure admin loading states are visible */
+.admin-loading,
+.loading {
+  width: 100% !important;
+  text-align: center !important;
+  padding: 40px 20px !important;
+}
+
+/* Fix for admin error and success messages */
+.admin-message,
+.success-message,
+.error-message {
+  width: 100% !important;
+  box-sizing: border-box !important;
+  margin-bottom: 1rem !important;
+}
+
+/* Ensure admin headers are properly sized */
+.admin-header,
+.page-header {
+  width: 100% !important;
+  box-sizing: border-box !important;
+  margin-bottom: 2rem !important;
+}
+
+/* Fix for admin navigation */
+.admin-nav,
+.admin-breadcrumb {
+  width: 100% !important;
+  box-sizing: border-box !important;
+  overflow-x: auto !important;
+  scroll-behavior: smooth !important;
+}
+
+/* Ensure all admin content is scrollable */
+.admin-content-wrapper {
+  height: 100% !important;
+  overflow-y: auto !important;
+  scroll-behavior: smooth !important;
+}
+
+/* Fix for admin sidebar on mobile */
+@media (max-width: 1024px) {
+  .admin-sidebar {
+    position: fixed !important;
+    z-index: 1000 !important;
+    height: 100vh !important;
+    overflow-y: auto !important;
+    scroll-behavior: smooth !important;
+  }
+}
+
+/* Ensure proper z-index for admin elements */
+.admin-header {
+  z-index: 100 !important;
+}
+
+.admin-sidebar {
+  z-index: 200 !important;
+}
+
+.admin-modal {
+  z-index: 1000 !important;
+}
+
+/* Fix for admin tooltips and dropdowns */
+.admin-tooltip,
+.admin-dropdown {
+  z-index: 500 !important;
+}
+
+/* Ensure all admin inputs are properly sized */
+.admin-input,
+.form-control {
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* Fix for admin file uploads */
+.admin-file-upload {
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* Ensure admin images are responsive */
+.admin-image,
+.profile-image {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+/* Fix for admin charts and graphs */
+.admin-chart,
+.admin-graph {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow: visible !important;
+}
+
+/* Final catch-all for any remaining issues */
+.admin-layout * {
+  box-sizing: border-box !important;
+}
+
+/* Smooth scrolling for all admin elements */
+.admin-layout,
+.admin-layout * {
+  scroll-behavior: smooth !important;
+}
