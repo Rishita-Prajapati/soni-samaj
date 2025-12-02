@@ -37,6 +37,15 @@ const AddEventForm = ({ eventType, onSuccess, onCancel }) => {
         subtitle: 'e.g., Major modernization project begins',
         description: 'Full details about the news...'
       }
+    },
+    birthday: {
+      title: 'Add Birthday Event',
+      icon: '🎂',
+      placeholder: {
+        title: 'e.g., Birthday Celebration',
+        subtitle: 'e.g., Celebrating another year of life',
+        description: 'Birthday celebration details...'
+      }
     }
   };
 
@@ -194,7 +203,7 @@ const AddEventForm = ({ eventType, onSuccess, onCancel }) => {
               boxShadow: loading ? 'none' : '0 4px 12px rgba(255, 153, 51, 0.3)'
             }}
           >
-            {loading ? 'Adding...' : `Add ${eventType === 'badhai' ? 'Badhai' : eventType === 'shok' ? 'Shok' : 'News'}`}
+            {loading ? 'Adding...' : `Add ${eventType === 'badhai' ? 'Badhai' : eventType === 'shok' ? 'Shok' : eventType === 'birthday' ? 'Birthday' : 'News'}`}
           </button>
         </div>
       </form>

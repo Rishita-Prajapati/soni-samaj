@@ -4,9 +4,12 @@ import AddEventForm from './AddEventForm';
 import MembersManagement from './MembersManagement';
 import SangathanManagement from './SangathanManagement';
 import MessagesManagement from './MessagesManagement';
+import BirthdayEventManagement from './BirthdayEventManagement';
+import AddMemberForm from './AddMemberForm';
 
 const SimpleAdminPage = ({ title, icon, admin, onLogout, children }) => {
   const [showAddForm, setShowAddForm] = useState(false);
+  const [showAddMember, setShowAddMember] = useState(false);
   
   // Determine event type based on title
   const getEventType = () => {
@@ -31,9 +34,38 @@ const SimpleAdminPage = ({ title, icon, admin, onLogout, children }) => {
 
   // Show specific management components
   if (title.toLowerCase().includes('members')) {
+    if (showAddMember) {
+      return (
+        <AdminLayout admin={admin} onLogout={onLogout}>
+          <AddMemberForm 
+            onSuccess={() => setShowAddMember(false)}
+            onCancel={() => setShowAddMember(false)}
+          />
+        </AdminLayout>
+      );
+    }
     return (
       <AdminLayout admin={admin} onLogout={onLogout}>
-        <MembersManagement />
+        <div style={{ padding: '20px' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
+            <h1>👥 Members Management</h1>
+            <button
+              onClick={() => setShowAddMember(true)}
+              style={{
+                background: 'linear-gradient(135deg, #FF9933, #800000)',
+                color: 'white',
+                border: 'none',
+                padding: '12px 20px',
+                borderRadius: '8px',
+                cursor: 'pointer',
+                fontWeight: '500'
+              }}
+            >
+              + Add Member
+            </button>
+          </div>
+          <MembersManagement />
+        </div>
       </AdminLayout>
     );
   }
@@ -50,6 +82,14 @@ const SimpleAdminPage = ({ title, icon, admin, onLogout, children }) => {
     return (
       <AdminLayout admin={admin} onLogout={onLogout}>
         <MessagesManagement />
+      </AdminLayout>
+    );
+  }
+
+  if (title.toLowerCase().includes('birthday')) {
+    return (
+      <AdminLayout admin={admin} onLogout={onLogout}>
+        <BirthdayEventManagement admin={admin} onLogout={onLogout} />
       </AdminLayout>
     );
   }
