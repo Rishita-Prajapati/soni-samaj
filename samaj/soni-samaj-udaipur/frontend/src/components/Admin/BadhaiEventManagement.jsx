@@ -193,21 +193,7 @@ const BadhaiEventManagement = ({ admin, onLogout }) => {
           </button>
         </div>
 
-        <div style={{padding: '10px', background: '#f0f0f0', margin: '10px 0', borderRadius: '4px'}}>
-          <strong>Debug Info:</strong> showForm = {showForm.toString()}
-          <br/>
-          <button onClick={() => setShowForm(!showForm)} style={{marginTop: '10px', padding: '5px 10px'}}>
-            Toggle Form (Test Button)
-          </button>
-        </div>
-        
-        {showForm && (
-          <div style={{padding: '20px', background: '#e6fffa', border: '2px solid #10b981', borderRadius: '8px', margin: '10px 0'}}>
-            <h3>✅ FORM IS VISIBLE!</h3>
-            <p>The form toggle is working. If you see this, the button functionality works.</p>
-            <button onClick={() => setShowForm(false)}>Hide Form</button>
-          </div>
-        )}
+
         
         {!showForm ? (
           <div className="events-table-container">

@@ -245,12 +245,7 @@ const SangathanManagement = ({ admin, onLogout }) => {
             <p>Manage organization committee members</p>
           </div>
           <button 
-            onClick={(e) => {
-              e.preventDefault();
-              console.log('Add Sangathan button clicked');
-              setShowForm(true);
-              setEditingMember(null);
-            }}
+            onClick={handleShowForm}
             className="add-event-btn"
             style={{
               background: '#10b981',
@@ -266,9 +261,7 @@ const SangathanManagement = ({ admin, onLogout }) => {
           </button>
         </div>
 
-        <div style={{padding: '10px', background: '#f0f0f0', margin: '10px 0', borderRadius: '4px'}}>
-          <strong>Debug Info:</strong> showForm = {showForm.toString()}
-        </div>
+
         
         {!showForm ? (
           <div className="events-table-container">

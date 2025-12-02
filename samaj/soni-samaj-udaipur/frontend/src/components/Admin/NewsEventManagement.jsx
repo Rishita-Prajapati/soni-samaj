@@ -178,9 +178,7 @@ const NewsEventManagement = ({ admin, onLogout }) => {
           </button>
         </div>
 
-        <div style={{padding: '10px', background: '#f0f0f0', margin: '10px 0', borderRadius: '4px'}}>
-          <strong>Debug Info:</strong> showForm = {showForm.toString()}
-        </div>
+
         
         {!showForm ? (
           <div className="events-table-container">
