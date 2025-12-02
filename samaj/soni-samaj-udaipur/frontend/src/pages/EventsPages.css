@@ -1,741 +1,730 @@
 /* EventsPages.css - Clean Orange & White Theme for All Pages */
 
 .events-page {
-    background-color: #ffffff;
-    min-height: 100vh;
-  }
-  
-  .events-page .page-header {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-  }
-  
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-  
+  background-color: #ffffff;
+  min-height: 100vh;
+  padding-top: 100px;
+}
 
+.events-page .page-header {
+  display: none !important;
+}
+
+.events-header {
+  display: none !important;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Clean UI Container - Centered Layout */
+.events-container-full {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.events-feed-centered {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+/* Clean Admin Post Card */
+.admin-post-card-clean {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(255, 107, 53, 0.12);
+  border: 2px solid #fff7f4;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+.admin-post-card-clean:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 48px rgba(255, 107, 53, 0.2);
+  border-color: #ff6b35;
+}
+
+.admin-post-card-clean::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #ff6b35, #ff8a50);
+}
+
+/* Clean Admin Post Header */
+.admin-post-header-clean {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 28px;
+  border-bottom: 2px solid #fff7f4;
+  background: white;
+}
+
+.admin-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.admin-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #ff6b35;
+  box-shadow: 0 4px 16px rgba(255, 107, 53, 0.3);
+  position: relative;
+}
+
+.admin-avatar::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #ff6b35, #ff8a50);
+  z-index: -1;
+}
+
+.admin-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.admin-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-username {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 0;
+}
+
+.post-time {
+  font-size: 0.9rem;
+  color: #ff6b35;
+  margin-top: 3px;
+  font-weight: 600;
+}
+
+.verified-badge {
+  background: linear-gradient(135deg, #ff6b35, #ff8a50);
+  color: white;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(255, 107, 53, 0.4);
+}
+
+/* Clean Title Section */
+.post-title-section-clean {
+  background: linear-gradient(135deg, #ff6b35 0%, #ff8a50 100%);
+  color: white;
+  padding: 36px 28px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.post-title-section-clean::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% { transform: translateX(-100%) translateY(-100%); }
+  50% { transform: translateX(0%) translateY(0%); }
+}
+
+.post-main-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+  color: white;
+  line-height: 1.2;
+  position: relative;
+  z-index: 1;
+}
+
+.post-subtitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #fff7f4;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* Clean Image Section */
+.post-images-clean {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  height: 380px;
+  gap: 4px;
+  background: #ff6b35;
+}
+
+.main-image {
+  overflow: hidden;
+  position: relative;
+}
+
+.main-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.secondary-image {
+  overflow: hidden;
+  position: relative;
+}
+
+.secondary-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.admin-post-card-clean:hover .main-image img,
+.admin-post-card-clean:hover .secondary-image img {
+  transform: scale(1.1);
+}
+
+/* Clean Description */
+.post-description-clean {
+  padding: 28px;
+  background: white;
+}
+
+.post-description-clean p {
+  color: #2c3e50;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* Birthday Person Info */
+.birthday-person-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 16px 20px;
+  background: linear-gradient(135deg, #fff7f4, #ffe8e0);
+  border-radius: 12px;
+  margin-bottom: 20px;
+  border-left: 4px solid #ff6b35;
+}
+
+.birthday-cake {
+  font-size: 2rem;
+}
+
+.person-details {
+  flex: 1;
+}
+
+.person-name {
+  font-weight: 700;
+  color: #ff6b35;
+  font-size: 1.2rem;
+  margin-bottom: 4px;
+}
+
+.person-age {
+  font-size: 0.9rem;
+  color: #ff8a50;
+  font-weight: 600;
+}
+
+/* News Priority Badge */
+.news-priority-badge {
+  margin-bottom: 16px;
+}
+
+.priority-indicator {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.priority-indicator.high {
+  background: linear-gradient(135deg, #ff4444, #ff6666);
+  color: white;
+}
+
+.priority-indicator.medium {
+  background: linear-gradient(135deg, #ff8800, #ffaa44);
+  color: white;
+}
+
+.priority-indicator.low {
+  background: linear-gradient(135deg, #44aa44, #66cc66);
+  color: white;
+}
+
+/* Clean Post Actions */
+.admin-post-actions-clean {
+  padding: 24px 28px;
+  border-top: 2px solid #fff7f4;
+  background: linear-gradient(135deg, #fffcfa, #fff7f4);
+}
+
+.action-buttons-clean {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 18px;
+}
+
+.action-btn-clean {
+  background: white;
+  border: 2px solid #ff6b35;
+  cursor: pointer;
+  padding: 12px;
+  transition: all 0.3s ease;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.action-btn-clean::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #ff6b35, #ff8a50);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.action-btn-clean:hover::before {
+  opacity: 1;
+}
+
+.action-btn-clean:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+  border-color: #ff8a50;
+}
+
+.action-btn-clean:hover .action-icon {
+  transform: scale(1.1);
+  position: relative;
+  z-index: 1;
+}
+
+.action-icon {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.like-btn.liked {
+  background: #ff6b35;
+  color: white;
+  border-color: #ff8a50;
+}
+
+.like-btn.liked .action-icon {
+  animation: likeAnimation 0.5s ease;
+}
+
+@keyframes likeAnimation {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.4) rotate(15deg); }
+  100% { transform: scale(1); }
+}
+
+.bookmark-btn {
+  margin-left: auto;
+}
+
+/* Clean Post Stats */
+.post-stats-clean {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.likes-count {
+  font-weight: 700;
+  color: #ff6b35;
+  font-size: 1.05rem;
+}
+
+.shares-count {
+  color: #ff8a50;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+/* Scroll Animations */
+.admin-post-card-clean {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.admin-post-card-clean:nth-child(1) { animation-delay: 0.1s; }
+.admin-post-card-clean:nth-child(2) { animation-delay: 0.2s; }
+.admin-post-card-clean:nth-child(3) { animation-delay: 0.3s; }
+.admin-post-card-clean:nth-child(4) { animation-delay: 0.4s; }
+.admin-post-card-clean:nth-child(5) { animation-delay: 0.5s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover Effects */
+.admin-post-card-clean:hover .post-title-section-clean {
+  background: linear-gradient(135deg, #e55a2e 0%, #ff6b35 100%);
+}
+
+.admin-post-card-clean:hover .post-subtitle {
+  color: #ffffff;
+}
+
+/* Page Specific Variations */
+
+/* Shok Samachar Page - Respectful Gray Tones */
+.shok-page .admin-post-card-clean::before {
+  background: linear-gradient(90deg, #6c757d, #8e9297);
+}
+
+.shok-page .admin-avatar {
+  border-color: #6c757d;
+  box-shadow: 0 4px 16px rgba(108, 117, 125, 0.3);
+}
+
+.shok-page .post-time {
+  color: #6c757d;
+}
+
+.shok-page .verified-badge {
+  background: linear-gradient(135deg, #6c757d, #8e9297);
+}
+
+.shok-page .post-title-section-clean {
+  background: linear-gradient(135deg, #6c757d 0%, #8e9297 100%);
+}
+
+.shok-page .action-btn-clean {
+  border-color: #6c757d;
+}
+
+.shok-page .action-btn-clean::before {
+  background: linear-gradient(135deg, #6c757d, #8e9297);
+}
+
+.shok-page .like-btn.liked {
+  background: #6c757d;
+  border-color: #8e9297;
+}
+
+.shok-page .likes-count {
+  color: #6c757d;
+}
+
+.shok-page .shares-count {
+  color: #8e9297;
+}
+
+/* Birthday Page - Festive Pink Tones */
+.birthday-page .admin-post-card-clean::before {
+  background: linear-gradient(90deg, #e91e63, #f06292);
+}
+
+.birthday-page .admin-avatar {
+  border-color: #e91e63;
+  box-shadow: 0 4px 16px rgba(233, 30, 99, 0.3);
+}
+
+.birthday-page .post-time {
+  color: #e91e63;
+}
+
+.birthday-page .verified-badge {
+  background: linear-gradient(135deg, #e91e63, #f06292);
+}
+
+.birthday-page .post-title-section-clean {
+  background: linear-gradient(135deg, #e91e63 0%, #f06292 100%);
+}
+
+.birthday-page .action-btn-clean {
+  border-color: #e91e63;
+}
+
+.birthday-page .action-btn-clean::before {
+  background: linear-gradient(135deg, #e91e63, #f06292);
+}
+
+.birthday-page .like-btn.liked {
+  background: #e91e63;
+  border-color: #f06292;
+}
+
+.birthday-page .likes-count {
+  color: #e91e63;
+}
+
+.birthday-page .shares-count {
+  color: #f06292;
+}
+
+/* News Page - Professional Blue Tones */
+.news-page .admin-post-card-clean::before {
+  background: linear-gradient(90deg, #2196f3, #42a5f5);
+}
+
+.news-page .admin-avatar {
+  border-color: #2196f3;
+  box-shadow: 0 4px 16px rgba(33, 150, 243, 0.3);
+}
+
+.news-page .post-time {
+  color: #2196f3;
+}
+
+.news-page .verified-badge {
+  background: linear-gradient(135deg, #2196f3, #42a5f5);
+}
+
+.news-page .post-title-section-clean {
+  background: linear-gradient(135deg, #2196f3 0%, #42a5f5 100%);
+}
+
+.news-page .action-btn-clean {
+  border-color: #2196f3;
+}
+
+.news-page .action-btn-clean::before {
+  background: linear-gradient(135deg, #2196f3, #42a5f5);
+}
+
+.news-page .like-btn.liked {
+  background: #2196f3;
+  border-color: #42a5f5;
+}
+
+.news-page .likes-count {
+  color: #2196f3;
+}
+
+.news-page .shares-count {
+  color: #42a5f5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .events-page {
+    padding-top: 110px;
+  }
   
-  /* Clean UI Container - Centered Layout */
   .events-container-full {
-    max-width: 650px;
-    margin: 0 auto;
-    padding: 40px 20px;
+    max-width: 100%;
+    padding: 30px 15px;
   }
   
-  .events-feed-centered {
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-  }
-  
-  /* Clean Admin Post Card */
-  .admin-post-card-clean {
-    background: white;
-    border-radius: 20px;
-    box-shadow: 0 8px 32px rgba(255, 107, 53, 0.12);
-    border: 2px solid #fff7f4;
-    overflow: hidden;
-    transition: all 0.4s ease;
-    position: relative;
-  }
-  
-  .admin-post-card-clean:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 16px 48px rgba(255, 107, 53, 0.2);
-    border-color: #ff6b35;
-  }
-  
-  .admin-post-card-clean::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, #ff6b35, #ff8a50);
-  }
-  
-  /* Clean Admin Post Header */
   .admin-post-header-clean {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 24px 28px;
-    border-bottom: 2px solid #fff7f4;
-    background: white;
+    padding: 20px 22px;
   }
   
-  .admin-info {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-  }
-  
-  .admin-avatar {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 3px solid #ff6b35;
-    box-shadow: 0 4px 16px rgba(255, 107, 53, 0.3);
-    position: relative;
-  }
-  
-  .admin-avatar::after {
-    content: '';
-    position: absolute;
-    inset: -2px;
-    border-radius: 50%;
-    background: linear-gradient(45deg, #ff6b35, #ff8a50);
-    z-index: -1;
-  }
-  
-  .admin-avatar img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .admin-details {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .admin-username {
-    font-size: 1.15rem;
-    font-weight: 700;
-    color: #2c3e50;
-    margin: 0;
-  }
-  
-  .post-time {
-    font-size: 0.9rem;
-    color: #ff6b35;
-    margin-top: 3px;
-    font-weight: 600;
-  }
-  
-  .verified-badge {
-    background: linear-gradient(135deg, #ff6b35, #ff8a50);
-    color: white;
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.85rem;
-    font-weight: bold;
-    box-shadow: 0 4px 12px rgba(255, 107, 53, 0.4);
-  }
-  
-  /* Clean Title Section */
   .post-title-section-clean {
-    background: linear-gradient(135deg, #ff6b35 0%, #ff8a50 100%);
-    color: white;
-    padding: 36px 28px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .post-title-section-clean::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
-    animation: shimmer 3s ease-in-out infinite;
-  }
-  
-  @keyframes shimmer {
-    0%, 100% { transform: translateX(-100%) translateY(-100%); }
-    50% { transform: translateX(0%) translateY(0%); }
+    padding: 28px 22px;
   }
   
   .post-main-title {
-    font-size: 2.2rem;
-    font-weight: 800;
-    margin-bottom: 12px;
-    color: white;
-    line-height: 1.2;
-    position: relative;
-    z-index: 1;
+    font-size: 1.8rem;
   }
   
   .post-subtitle {
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: #fff7f4;
-    margin: 0;
-    position: relative;
-    z-index: 1;
-  }
-  
-  /* Clean Image Section */
-  .post-images-clean {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    height: 380px;
-    gap: 4px;
-    background: #ff6b35;
-  }
-  
-  .main-image {
-    overflow: hidden;
-    position: relative;
-  }
-  
-  .main-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-  }
-  
-  .secondary-image {
-    overflow: hidden;
-    position: relative;
-  }
-  
-  .secondary-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-  }
-  
-  .admin-post-card-clean:hover .main-image img,
-  .admin-post-card-clean:hover .secondary-image img {
-    transform: scale(1.1);
-  }
-  
-  /* Clean Description */
-  .post-description-clean {
-    padding: 28px;
-    background: white;
-  }
-  
-  .post-description-clean p {
-    color: #2c3e50;
-    line-height: 1.8;
     font-size: 1.1rem;
-    margin: 0;
-    font-weight: 400;
   }
   
-  /* Birthday Person Info */
-  .birthday-person-info {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    padding: 16px 20px;
-    background: linear-gradient(135deg, #fff7f4, #ffe8e0);
-    border-radius: 12px;
-    margin-bottom: 20px;
-    border-left: 4px solid #ff6b35;
+  .post-images-clean {
+    height: 300px;
   }
   
-  .birthday-cake {
-    font-size: 2rem;
+  .post-description-clean {
+    padding: 22px;
   }
   
-  .person-details {
-    flex: 1;
-  }
-  
-  .person-name {
-    font-weight: 700;
-    color: #ff6b35;
-    font-size: 1.2rem;
-    margin-bottom: 4px;
-  }
-  
-  .person-age {
-    font-size: 0.9rem;
-    color: #ff8a50;
-    font-weight: 600;
-  }
-  
-  /* News Priority Badge */
-  .news-priority-badge {
-    margin-bottom: 16px;
-  }
-  
-  .priority-indicator {
-    display: inline-block;
-    padding: 8px 16px;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-  }
-  
-  .priority-indicator.high {
-    background: linear-gradient(135deg, #ff4444, #ff6666);
-    color: white;
-  }
-  
-  .priority-indicator.medium {
-    background: linear-gradient(135deg, #ff8800, #ffaa44);
-    color: white;
-  }
-  
-  .priority-indicator.low {
-    background: linear-gradient(135deg, #44aa44, #66cc66);
-    color: white;
-  }
-  
-  /* Clean Post Actions */
   .admin-post-actions-clean {
-    padding: 24px 28px;
-    border-top: 2px solid #fff7f4;
-    background: linear-gradient(135deg, #fffcfa, #fff7f4);
+    padding: 20px 22px;
   }
   
   .action-buttons-clean {
-    display: flex;
-    gap: 24px;
-    margin-bottom: 18px;
+    gap: 18px;
+  }
+  
+  .admin-avatar {
+    width: 42px;
+    height: 42px;
+  }
+  
+  .events-feed-centered {
+    gap: 35px;
   }
   
   .action-btn-clean {
-    background: white;
-    border: 2px solid #ff6b35;
-    cursor: pointer;
-    padding: 12px;
-    transition: all 0.3s ease;
-    border-radius: 50%;
-    width: 48px;
-    height: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
+    width: 44px;
+    height: 44px;
+  }
+}
+
+@media (max-width: 480px) {
+  .events-page {
+    padding-top: 120px;
   }
   
-  .action-btn-clean::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(135deg, #ff6b35, #ff8a50);
-    opacity: 0;
-    transition: opacity 0.3s ease;
+  .events-container-full {
+    padding: 20px 12px;
   }
   
-  .action-btn-clean:hover::before {
-    opacity: 1;
+  .admin-post-card-clean {
+    border-radius: 16px;
   }
   
-  .action-btn-clean:hover {
-    transform: scale(1.1);
-    box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
-    border-color: #ff8a50;
+  .post-images-clean {
+    grid-template-columns: 1fr;
+    height: auto;
   }
   
-  .action-btn-clean:hover .action-icon {
-    transform: scale(1.1);
-    position: relative;
-    z-index: 1;
+  .main-image,
+  .secondary-image {
+    height: 240px;
+  }
+  
+  .post-title-section-clean {
+    padding: 24px 18px;
+  }
+  
+  .post-main-title {
+    font-size: 1.6rem;
+  }
+  
+  .post-subtitle {
+    font-size: 1rem;
+  }
+  
+  .admin-username {
+    font-size: 1rem;
   }
   
   .action-icon {
-    font-size: 1.5rem;
-    transition: transform 0.3s ease;
-    position: relative;
-    z-index: 1;
+    font-size: 1.3rem;
   }
   
-  .like-btn.liked {
-    background: #ff6b35;
-    color: white;
-    border-color: #ff8a50;
+  .action-btn-clean {
+    width: 40px;
+    height: 40px;
   }
   
-  .like-btn.liked .action-icon {
-    animation: likeAnimation 0.5s ease;
+  .birthday-person-info {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
   }
-  
-  @keyframes likeAnimation {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.4) rotate(15deg); }
-    100% { transform: scale(1); }
-  }
-  
-  .bookmark-btn {
-    margin-left: auto;
-  }
-  
-  /* Clean Post Stats */
-  .post-stats-clean {
-    display: flex;
-    gap: 24px;
-    align-items: center;
-  }
-  
-  .likes-count {
-    font-weight: 700;
-    color: #ff6b35;
-    font-size: 1.05rem;
-  }
-  
-  .shares-count {
-    color: #ff8a50;
-    font-size: 1.05rem;
-    font-weight: 600;
-  }
-  
-  /* Scroll Animations */
-  .admin-post-card-clean {
-    opacity: 0;
-    transform: translateY(40px);
-    animation: fadeInUp 0.8s ease forwards;
-  }
-  
-  .admin-post-card-clean:nth-child(1) { animation-delay: 0.1s; }
-  .admin-post-card-clean:nth-child(2) { animation-delay: 0.2s; }
-  .admin-post-card-clean:nth-child(3) { animation-delay: 0.3s; }
-  .admin-post-card-clean:nth-child(4) { animation-delay: 0.4s; }
-  .admin-post-card-clean:nth-child(5) { animation-delay: 0.5s; }
-  
-  @keyframes fadeInUp {
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  /* Hover Effects */
-  .admin-post-card-clean:hover .post-title-section-clean {
-    background: linear-gradient(135deg, #e55a2e 0%, #ff6b35 100%);
-  }
-  
-  .admin-post-card-clean:hover .post-subtitle {
-    color: #ffffff;
-  }
-  
-  /* Page Specific Variations */
-  
-  /* Shok Samachar Page - Respectful Gray Tones */
-  .shok-page .events-header {
-    background: linear-gradient(135deg, #6c757d 0%, #495057 100%);
-  }
-  
-  .shok-page .admin-post-card-clean::before {
-    background: linear-gradient(90deg, #6c757d, #8e9297);
-  }
-  
-  .shok-page .admin-avatar {
-    border-color: #6c757d;
-    box-shadow: 0 4px 16px rgba(108, 117, 125, 0.3);
-  }
-  
-  .shok-page .post-time {
-    color: #6c757d;
-  }
-  
-  .shok-page .verified-badge {
-    background: linear-gradient(135deg, #6c757d, #8e9297);
-  }
-  
-  .shok-page .post-title-section-clean {
-    background: linear-gradient(135deg, #6c757d 0%, #8e9297 100%);
-  }
-  
-  .shok-page .action-btn-clean {
-    border-color: #6c757d;
-  }
-  
-  .shok-page .action-btn-clean::before {
-    background: linear-gradient(135deg, #6c757d, #8e9297);
-  }
-  
-  .shok-page .like-btn.liked {
-    background: #6c757d;
-    border-color: #8e9297;
-  }
-  
-  .shok-page .likes-count {
-    color: #6c757d;
-  }
-  
-  .shok-page .shares-count {
-    color: #8e9297;
-  }
-  
-  /* Birthday Page - Festive Pink Tones */
-  .birthday-page .events-header {
-    background: linear-gradient(135deg, #e91e63 0%, #ad1457 100%);
-  }
-  
-  .birthday-page .admin-post-card-clean::before {
-    background: linear-gradient(90deg, #e91e63, #f06292);
-  }
-  
-  .birthday-page .admin-avatar {
-    border-color: #e91e63;
-    box-shadow: 0 4px 16px rgba(233, 30, 99, 0.3);
-  }
-  
-  .birthday-page .post-time {
-    color: #e91e63;
-  }
-  
-  .birthday-page .verified-badge {
-    background: linear-gradient(135deg, #e91e63, #f06292);
-  }
-  
-  .birthday-page .post-title-section-clean {
-    background: linear-gradient(135deg, #e91e63 0%, #f06292 100%);
-  }
-  
-  .birthday-page .action-btn-clean {
-    border-color: #e91e63;
-  }
-  
-  .birthday-page .action-btn-clean::before {
-    background: linear-gradient(135deg, #e91e63, #f06292);
-  }
-  
-  .birthday-page .like-btn.liked {
-    background: #e91e63;
-    border-color: #f06292;
-  }
-  
-  .birthday-page .likes-count {
-    color: #e91e63;
-  }
-  
-  .birthday-page .shares-count {
-    color: #f06292;
-  }
-  
-  /* News Page - Professional Blue Tones */
-  .news-page .events-header {
-    background: linear-gradient(135deg, #2196f3 0%, #1976d2 100%);
-  }
-  
-  .news-page .admin-post-card-clean::before {
-    background: linear-gradient(90deg, #2196f3, #42a5f5);
-  }
-  
-  .news-page .admin-avatar {
-    border-color: #2196f3;
-    box-shadow: 0 4px 16px rgba(33, 150, 243, 0.3);
-  }
-  
-  .news-page .post-time {
-    color: #2196f3;
-  }
-  
-  .news-page .verified-badge {
-    background: linear-gradient(135deg, #2196f3, #42a5f5);
-  }
-  
-  .news-page .post-title-section-clean {
-    background: linear-gradient(135deg, #2196f3 0%, #42a5f5 100%);
-  }
-  
-  .news-page .action-btn-clean {
-    border-color: #2196f3;
-  }
-  
-  .news-page .action-btn-clean::before {
-    background: linear-gradient(135deg, #2196f3, #42a5f5);
-  }
-  
-  .news-page .like-btn.liked {
-    background: #2196f3;
-    border-color: #42a5f5;
-  }
-  
-  .news-page .likes-count {
-    color: #2196f3;
-  }
-  
-  .news-page .shares-count {
-    color: #42a5f5;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .events-container-full {
-      max-width: 100%;
-      padding: 30px 15px;
-    }
-    
-    .events-header h1 {
-      font-size: 2rem;
-    }
-    
-    .events-header p {
-      font-size: 1rem;
-    }
-    
-    .admin-post-header-clean {
-      padding: 20px 22px;
-    }
-    
-    .post-title-section-clean {
-      padding: 28px 22px;
-    }
-    
-    .post-main-title {
-      font-size: 1.8rem;
-    }
-    
-    .post-subtitle {
-      font-size: 1.1rem;
-    }
-    
-    .post-images-clean {
-      height: 300px;
-    }
-    
-    .post-description-clean {
-      padding: 22px;
-    }
-    
-    .admin-post-actions-clean {
-      padding: 20px 22px;
-    }
-    
-    .action-buttons-clean {
-      gap: 18px;
-    }
-    
-    .admin-avatar {
-      width: 42px;
-      height: 42px;
-    }
-    
-    .events-feed-centered {
-      gap: 35px;
-    }
-    
-    .action-btn-clean {
-      width: 44px;
-      height: 44px;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .events-container-full {
-      padding: 20px 12px;
-    }
-    
-    .admin-post-card-clean {
-      border-radius: 16px;
-    }
-    
-    .post-images-clean {
-      grid-template-columns: 1fr;
-      height: auto;
-    }
-    
-    .main-image,
-    .secondary-image {
-      height: 240px;
-    }
-    
-    .post-title-section-clean {
-      padding: 24px 18px;
-    }
-    
-    .post-main-title {
-      font-size: 1.6rem;
-    }
-    
-    .post-subtitle {
-      font-size: 1rem;
-    }
-    
-    .admin-username {
-      font-size: 1rem;
-    }
-    
-    .action-icon {
-      font-size: 1.3rem;
-    }
-    
-    .action-btn-clean {
-      width: 40px;
-      height: 40px;
-    }
-    
-    .birthday-person-info {
-      flex-direction: column;
-      text-align: center;
-      gap: 10px;
-    }
-  }
-  
-  /* Loading States */
-  .loading-post-clean {
-    background: white;
-    border-radius: 20px;
-    padding: 24px;
-    box-shadow: 0 8px 32px rgba(255, 107, 53, 0.12);
-    animation: shimmerLoad 2s infinite;
-  }
-  
-  @keyframes shimmerLoad {
-    0% { opacity: 1; }
-    50% { opacity: 0.7; }
-    100% { opacity: 1; }
-  }
-  
-  /* Birthday Card Specific Styling */
-  .birthday-card .birthday-person-info {
-    animation: birthdayGlow 2s ease-in-out infinite alternate;
-  }
-  
-  @keyframes birthdayGlow {
-    from { box-shadow: 0 0 5px rgba(233, 30, 99, 0.3); }
-    to { box-shadow: 0 0 15px rgba(233, 30, 99, 0.6); }
-  }
-  
-  /* News Card Specific Styling */
-  .news-card .news-priority-badge {
-    margin-bottom: 16px;
-  }
-  
-  .news-card .priority-indicator {
-    animation: priorityPulse 3s ease-in-out infinite;
-  }
-  
-  @keyframes priorityPulse {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-  }
-  
-  /* Legacy Support for Old Layout (Hidden) */
-  .events-container,
-  .events-sidebar,
-  .admin-sidebar,
-  .post-card,
-  .admin-post-card,
-  .sidebar-card {
-    display: none !important;
-  }
-  
-  /* Ensure Clean UI is Always Used */
-  .clean-ui .events-container-full {
-    display: block;
-  }
-  
-  .clean-ui .events-feed-centered {
-    display: flex;
-  }
-  
-  .clean-ui .admin-post-card-clean {
-    display: block;
-  }
+}
+
+/* Loading States */
+.loading-post-clean {
+  background: white;
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 8px 32px rgba(255, 107, 53, 0.12);
+  animation: shimmerLoad 2s infinite;
+}
+
+@keyframes shimmerLoad {
+  0% { opacity: 1; }
+  50% { opacity: 0.7; }
+  100% { opacity: 1; }
+}
+
+/* Birthday Card Specific Styling */
+.birthday-card .birthday-person-info {
+  animation: birthdayGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes birthdayGlow {
+  from { box-shadow: 0 0 5px rgba(233, 30, 99, 0.3); }
+  to { box-shadow: 0 0 15px rgba(233, 30, 99, 0.6); }
+}
+
+/* News Card Specific Styling */
+.news-card .news-priority-badge {
+  margin-bottom: 16px;
+}
+
+.news-card .priority-indicator {
+  animation: priorityPulse 3s ease-in-out infinite;
+}
+
+@keyframes priorityPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+/* Legacy Support for Old Layout (Hidden) */
+.events-container,
+.events-sidebar,
+.admin-sidebar,
+.post-card,
+.admin-post-card,
+.sidebar-card {
+  display: none !important;
+}
+
+/* Ensure Clean UI is Always Used */
+.clean-ui .events-container-full {
+  display: block;
+}
+
+.clean-ui .events-feed-centered {
+  display: flex;
+}
+
+.clean-ui .admin-post-card-clean {
+  display: block;
+}

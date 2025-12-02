@@ -129,6 +129,9 @@ const Header = () => {
               </div>
             </li>
             <li className="nav-item">
+              <Link to="/sangathan" className="nav-link">Sangathan</Link>
+            </li>
+            <li className="nav-item">
               <Link to="/contact" className="nav-link">Contact</Link>
             </li>
           </ul>
@@ -142,7 +145,6 @@ const Header = () => {
             </div>
             <div className={`hamburger-dropdown ${showHamburgerMenu ? 'active' : ''}`}>
               <Link to="/about" className="hamburger-link" onClick={() => setShowHamburgerMenu(false)}>About</Link>
-              <Link to="/sangathan" className="hamburger-link" onClick={() => setShowHamburgerMenu(false)}>Sangathan</Link>
               <Link to="/kul-devta" className="hamburger-link" onClick={() => setShowHamburgerMenu(false)}>Kul Devta</Link>
             </div>
           </div>
@@ -193,7 +195,7 @@ const Header = () => {
           </div>
 
           {/* Register Button */}
-          <Link to="/register" className="register-link">पंजीकरण</Link>
+          <Link to="/register" className="register-link">RIGISTRATION</Link>
         </nav>
       </div>
     </header>

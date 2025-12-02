@@ -1,473 +1,433 @@
 /* Sangathan Page Styles */
 
 .sangathan-page {
-    min-height: 100vh;
-    background-color: #f8f9fa;
-  }
-  
-  .sangathan-header {
-    background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
-    color: white;
-    padding: 80px 0 60px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .sangathan-header::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
-    opacity: 0.3;
-  }
-  
-  .sangathan-header h1 {
-    font-size: 4rem;
-    font-weight: 800;
-    margin-bottom: 15px;
-    position: relative;
-    z-index: 2;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  }
-  
-  .sangathan-header p {
-    font-size: 1.3rem;
-    opacity: 0.9;
-    position: relative;
-    z-index: 2;
-    margin: 0;
-  }
-  
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  padding-top: 100px;
+}
+
+.sangathan-header {
+  display: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.sangathan-content {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Districts Grid */
+.districts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.district-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.district-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+.district-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #ff6b35, #ffa500);
+}
+
+.district-image {
+  height: 220px;
+  overflow: hidden;
+  position: relative;
+}
+
+.district-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.district-card:hover .district-image img {
+  transform: scale(1.1);
+}
+
+.district-image::after {
+  content: '🏘️';
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 2rem;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.district-info {
+  padding: 30px;
+  text-align: center;
+}
+
+.district-info h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 12px;
+}
+
+.district-info p {
+  color: #718096;
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.see-details-btn {
+  background: linear-gradient(135deg, #ff6b35, #ffa500);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.see-details-btn:hover {
+  background: linear-gradient(135deg, #e55a2e, #ff8c00);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 107, 53, 0.4);
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+.see-details-btn:hover .arrow {
+  transform: translateX(4px);
+}
+
+/* Cities Grid */
+.cities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.city-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+}
+
+.city-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.city-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 12px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.city-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.city-info {
+  flex: 1;
+}
+
+.city-info h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 8px;
+}
+
+.city-info p {
+  color: #718096;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+/* Members Section */
+.members-section {
+  margin-bottom: 50px;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2196f3;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.members-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.member-card {
+  background: white;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  text-align: center;
+  position: relative;
+}
+
+.member-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.member-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 0 auto 20px;
+  background: #f7fafc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #e2e8f0;
+}
+
+.member-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.member-contact {
+  background: linear-gradient(135deg, #ffa500, #ff8c00);
+  border-radius: 25px;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.phone-icon {
+  font-size: 1.2rem;
+}
+
+.phone-number {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.phone-number:hover {
+  text-decoration: underline;
+}
+
+.member-info {
+  text-align: center;
+}
+
+.member-name {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 8px;
+}
+
+.member-role {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.member-role.president {
+  background: linear-gradient(135deg, #f56565, #e53e3e);
+  color: white;
+}
+
+.member-role.member {
+  background: linear-gradient(135deg, #ed8936, #dd6b20);
+  color: white;
+}
+
+.member-role.secretary {
+  background: linear-gradient(135deg, #4299e1, #3182ce);
+  color: white;
+}
+
+.member-role.treasurer {
+  background: linear-gradient(135deg, #48bb78, #38a169);
+  color: white;
+}
+
+/* Back Button */
+.back-button-container {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.back-btn {
+  background: linear-gradient(135deg, #4a5568, #2d3748);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.back-btn:hover {
+  background: linear-gradient(135deg, #2d3748, #1a202c);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(74, 85, 104, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sangathan-page {
+    padding-top: 110px;
   }
   
   .sangathan-content {
-    padding: 60px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+    padding: 40px 15px;
   }
   
-  /* Districts Grid */
   .districts-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 40px;
-    margin-bottom: 40px;
+    grid-template-columns: 1fr;
+    gap: 25px;
   }
   
-  .district-card {
-    background: white;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    transition: all 0.4s ease;
-    cursor: pointer;
-    position: relative;
-  }
-  
-  .district-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
-  }
-  
-  .district-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, #ff6b35, #ffa500);
-  }
-  
-  .district-image {
-    height: 220px;
-    overflow: hidden;
-    position: relative;
-  }
-  
-  .district-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.4s ease;
-  }
-  
-  .district-card:hover .district-image img {
-    transform: scale(1.1);
-  }
-  
-  .district-image::after {
-    content: '🏘️';
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 2rem;
-    background: rgba(255, 255, 255, 0.9);
-    padding: 10px;
-    border-radius: 50%;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  }
-  
-  .district-info {
-    padding: 30px;
-    text-align: center;
-  }
-  
-  .district-info h3 {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: #2d3748;
-    margin-bottom: 12px;
-  }
-  
-  .district-info p {
-    color: #718096;
-    font-size: 1.1rem;
-    margin-bottom: 25px;
-    line-height: 1.6;
-  }
-  
-  .see-details-btn {
-    background: linear-gradient(135deg, #ff6b35, #ffa500);
-    color: white;
-    border: none;
-    padding: 12px 30px;
-    border-radius: 25px;
-    font-weight: 600;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-  }
-  
-  .see-details-btn:hover {
-    background: linear-gradient(135deg, #e55a2e, #ff8c00);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(255, 107, 53, 0.4);
-  }
-  
-  .arrow {
-    transition: transform 0.3s ease;
-  }
-  
-  .see-details-btn:hover .arrow {
-    transform: translateX(4px);
-  }
-  
-  /* Cities Grid */
   .cities-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 40px;
-    margin-bottom: 50px;
-  }
-  
-  .city-card {
-    background: white;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    padding: 20px;
+    grid-template-columns: 1fr;
     gap: 20px;
   }
   
-  .city-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-  }
-  
-  .city-image {
-    width: 100px;
-    height: 100px;
-    border-radius: 12px;
-    overflow: hidden;
-    flex-shrink: 0;
-  }
-  
-  .city-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .city-info {
-    flex: 1;
-  }
-  
-  .city-info h3 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #2d3748;
-    margin-bottom: 8px;
-  }
-  
-  .city-info p {
-    color: #718096;
-    font-size: 1rem;
-    margin-bottom: 15px;
-    line-height: 1.5;
-  }
-  
-  /* Members Section */
-  .members-section {
-    margin-bottom: 50px;
-  }
-  
-  .section-title {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #2196f3;
-    margin-bottom: 30px;
-    text-align: left;
+  .city-card {
+    flex-direction: column;
+    text-align: center;
   }
   
   .members-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    margin-bottom: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .district-info {
+    padding: 20px;
   }
   
   .member-card {
-    background: white;
-    border-radius: 16px;
-    padding: 25px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-    text-align: center;
-    position: relative;
+    padding: 20px;
   }
   
-  .member-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  .section-title {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .sangathan-page {
+    padding-top: 120px;
+  }
+  
+  .districts-grid,
+  .cities-grid,
+  .members-grid {
+    grid-template-columns: 1fr;
   }
   
   .member-image {
-    width: 120px;
-    height: 120px;
-    border-radius: 12px;
-    overflow: hidden;
-    margin: 0 auto 20px;
-    background: #f7fafc;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 3px solid #e2e8f0;
-  }
-  
-  .member-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .member-contact {
-    background: linear-gradient(135deg, #ffa500, #ff8c00);
-    border-radius: 25px;
-    padding: 10px 20px;
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-  }
-  
-  .phone-icon {
-    font-size: 1.2rem;
-  }
-  
-  .phone-number {
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1.1rem;
-  }
-  
-  .phone-number:hover {
-    text-decoration: underline;
-  }
-  
-  .member-info {
-    text-align: center;
+    width: 100px;
+    height: 100px;
   }
   
   .member-name {
-    font-size: 1.3rem;
-    font-weight: 700;
-    color: #2d3748;
-    margin-bottom: 8px;
+    font-size: 1.1rem;
   }
   
-  .member-role {
-    display: inline-block;
-    padding: 6px 16px;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-  }
-  
-  .member-role.president {
-    background: linear-gradient(135deg, #f56565, #e53e3e);
-    color: white;
-  }
-  
-  .member-role.member {
-    background: linear-gradient(135deg, #ed8936, #dd6b20);
-    color: white;
-  }
-  
-  .member-role.secretary {
-    background: linear-gradient(135deg, #4299e1, #3182ce);
-    color: white;
-  }
-  
-  .member-role.treasurer {
-    background: linear-gradient(135deg, #48bb78, #38a169);
-    color: white;
-  }
-  
-  /* Back Button */
-  .back-button-container {
-    text-align: center;
-    margin-top: 40px;
-  }
-  
-  .back-btn {
-    background: linear-gradient(135deg, #4a5568, #2d3748);
-    color: white;
-    border: none;
-    padding: 12px 30px;
-    border-radius: 25px;
-    font-weight: 600;
+  .phone-number {
     font-size: 1rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
   }
-  
-  .back-btn:hover {
-    background: linear-gradient(135deg, #2d3748, #1a202c);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(74, 85, 104, 0.4);
+}
+
+/* Loading Animation */
+.district-card,
+.city-card,
+.member-card {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.district-card:nth-child(1) { animation-delay: 0.1s; }
+.district-card:nth-child(2) { animation-delay: 0.2s; }
+.district-card:nth-child(3) { animation-delay: 0.3s; }
+
+.member-card:nth-child(1) { animation-delay: 0.1s; }
+.member-card:nth-child(2) { animation-delay: 0.2s; }
+.member-card:nth-child(3) { animation-delay: 0.3s; }
+.member-card:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .sangathan-header h1 {
-      font-size: 2.5rem;
-    }
-    
-    .sangathan-header p {
-      font-size: 1.1rem;
-    }
-    
-    .sangathan-content {
-      padding: 40px 15px;
-    }
-    
-    .districts-grid {
-      grid-template-columns: 1fr;
-      gap: 25px;
-    }
-    
-    .cities-grid {
-      grid-template-columns: 1fr;
-      gap: 20px;
-    }
-    
-    .city-card {
-      flex-direction: column;
-      text-align: center;
-    }
-    
-    .members-grid {
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-    
-    .district-info {
-      padding: 20px;
-    }
-    
-    .member-card {
-      padding: 20px;
-    }
-    
-    .section-title {
-      font-size: 1.5rem;
-      text-align: center;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .sangathan-header {
-      padding: 60px 0 40px;
-    }
-    
-    .sangathan-header h1 {
-      font-size: 2rem;
-    }
-    
-    .districts-grid,
-    .cities-grid,
-    .members-grid {
-      grid-template-columns: 1fr;
-    }
-    
-    .member-image {
-      width: 100px;
-      height: 100px;
-    }
-    
-    .member-name {
-      font-size: 1.1rem;
-    }
-    
-    .phone-number {
-      font-size: 1rem;
-    }
-  }
-  
-  /* Loading Animation */
-  .district-card,
-  .city-card,
-  .member-card {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.6s ease forwards;
-  }
-  
-  .district-card:nth-child(1) { animation-delay: 0.1s; }
-  .district-card:nth-child(2) { animation-delay: 0.2s; }
-  .district-card:nth-child(3) { animation-delay: 0.3s; }
-  
-  .member-card:nth-child(1) { animation-delay: 0.1s; }
-  .member-card:nth-child(2) { animation-delay: 0.2s; }
-  .member-card:nth-child(3) { animation-delay: 0.3s; }
-  .member-card:nth-child(4) { animation-delay: 0.4s; }
-  
-  @keyframes fadeInUp {
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
+}
